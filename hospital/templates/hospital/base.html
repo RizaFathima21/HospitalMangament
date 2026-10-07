@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Hospital Management System
+        {% endblock %}
+    </title>
+
+    {% load static %}
+
+    <link rel="stylesheet"
+          href="{% static 'hospital/css/style.css' %}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="navbar">
+
+        <h2>
+            🏥 City Care Hospital
+        </h2>
+
+        <nav>
+
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+
+            <a href="{% url 'doctors' %}">
+                Doctors
+            </a>
+
+            <a href="{% url 'book_appointment' %}">
+                Book Appointment
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    {% block content %}
+
+    {% endblock %}
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 City Care Hospital
+    </p>
+
+</footer>
+
+</body>
+
+</html>

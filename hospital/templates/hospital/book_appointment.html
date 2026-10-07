@@ -1,0 +1,39 @@
+{% extends 'hospital/base.html' %}
+
+
+{% block title %}
+Book Appointment
+{% endblock %}
+
+
+{% block content %}
+
+<div class="form-container">
+
+    <h1>
+        Book Doctor Appointment
+    </h1>
+
+    <p>
+        Enter your details below.
+    </p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button
+            type="submit"
+            class="button">
+
+            Confirm Appointment
+
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

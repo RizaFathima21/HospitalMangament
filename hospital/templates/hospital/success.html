@@ -1,0 +1,35 @@
+{% extends 'hospital/base.html' %}
+
+
+{% block title %}
+Appointment Confirmed
+{% endblock %}
+
+
+{% block content %}
+
+<div class="success-box">
+
+    <h1>
+        ✅ Appointment Request Submitted
+    </h1>
+
+    <p>
+        Your appointment has been successfully submitted.
+    </p>
+
+    <p>
+        The hospital staff will review your appointment.
+    </p>
+
+    <a
+        href="{% url 'home' %}"
+        class="button">
+
+        Return Home
+
+    </a>
+
+</div>
+
+{% endblock %}
